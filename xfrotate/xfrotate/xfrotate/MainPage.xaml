@@ -1,11 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:xfrotate"
-             x:Class="xfrotate.MainPage">
+<xfrotate:CustomContentPage
+    x:Class="xfrotate.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xfrotate="clr-namespace:xfrotate;assembly=xfrotate"
+    Title="XFVietNam">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout Spacing="10" VerticalOptions="Start">
+        <Button
+            Clicked="GoToPotraitPage"
+            Text="Goto Potrait Page"
+            TextColor="Blue" />
 
-</ContentPage>
+        <Button
+            Clicked="GoToLandScapePage"
+            Text="Goto Lanscape Page"
+            TextColor="Blue" />
+    </StackLayout>
+
+</xfrotate:CustomContentPage>

@@ -1,17 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
 
 namespace xfrotate
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage
     {
         public MainPage()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        private void GoToPotraitPage(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new NormalPotraitContentPage());
+        }
+
+        private void GoToLandScapePage(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new NormalLandscapeContentPage());
         }
     }
 }
